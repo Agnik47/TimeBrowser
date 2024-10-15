@@ -32,13 +32,13 @@ const StopWatch = () => {
 
   const reset = () => {
     setTime(0);
-    setLaps([]); // Clear laps on reset
+    setLaps([]); 
     setIsRunning(false);
     setIsPaused(false);
   };
 
   const recordLap = () => {
-    if (laps.length < 5) { // Limit the number of laps to 5
+    if (laps.length < 5) { 
       setLaps(prevLaps => [...prevLaps, time]);
     } 
   };
