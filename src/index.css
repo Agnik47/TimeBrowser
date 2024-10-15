@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.neon-glow {
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.7),
+               0 0 3px rgba(255, 255, 255, 0.6),
+               0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+@media (orientation: landscape) {
+  /* .neon-glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 150, 255, 0.6), 0 0 30px rgba(0, 0, 255, 0.6);
+  } */
+
+  h1 {
+    font-size: 40vw; /* Adjust this value as needed for landscape mode */
+  }
+}
