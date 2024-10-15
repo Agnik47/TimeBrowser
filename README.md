@@ -54,4 +54,4 @@ Sound Notifications: Add sound alerts when the timer finishes.
 Multiple Timer Support: Allow users to run multiple timers simultaneously.
 Theming: Add a dark/light mode switch for improved user experience.
 🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you'd like to collaborate.
+Contributions, issues, and feature requests are welcome! 
