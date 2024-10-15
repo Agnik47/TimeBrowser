@@ -32,13 +32,15 @@ const StopWatch = () => {
 
   const reset = () => {
     setTime(0);
-    setLaps([]);
+    setLaps([]); // Clear laps on reset
     setIsRunning(false);
     setIsPaused(false);
   };
 
   const recordLap = () => {
-    setLaps(prevLaps => [...prevLaps, time]);
+    if (laps.length < 5) { // Limit the number of laps to 5
+      setLaps(prevLaps => [...prevLaps, time]);
+    } 
   };
 
   const formatTime = (time) => {
@@ -63,16 +65,13 @@ const StopWatch = () => {
 
   return (
     <div className="flex flex-col items-center justify-center flex-grow mb-4 bg-gradient-to-b from-black to-gray-800 min-h-screen"> {/* Apply gradient classes here */}
-      {/* Navigation Component */}
       <Nav toggleFullScreen={toggleFullScreen} isFullScreen={isFullScreen()} />
 
-      {/* Displaying the stopwatch time */}
       <h1 className="text-[22vw] sm:text-[18vw] md:text-[16vw] lg:text-[14vw] xl:text-[22vw] 2xl:text-[20vw] text-white font-bold neon-glow">
         {formatTime(time)}
       </h1>
 
       <div className='flex space-x-4 mt-4'>
-        {/* Start Button */}
         {!isRunning && !isPaused && (
           <Button
             to={null}
@@ -83,7 +82,6 @@ const StopWatch = () => {
           </Button>
         )}
 
-        {/* Pause Button */}
         {isRunning && !isPaused && (
           <Button
             to={null}
@@ -94,7 +92,6 @@ const StopWatch = () => {
           </Button>
         )}
 
-        {/* Resume Button */}
         {isPaused && (
           <Button
             to={null}
@@ -105,7 +102,6 @@ const StopWatch = () => {
           </Button>
         )}
 
-        {/* Reset Button */}
         <Button
           to={null}
           onClick={reset}
@@ -114,7 +110,6 @@ const StopWatch = () => {
           <FaRedo className="inline-block mr-1" /> Reset
         </Button>
 
-        {/* Button to record a lap */}
         {isRunning && (
           <Button
             to={null}
@@ -126,7 +121,6 @@ const StopWatch = () => {
         )}
       </div>
 
-      {/* Displaying lap times */}
       <div className="mt-4 text-white">
         <h2 className="text-lg font-bold">Lap Times</h2>
         <ul className="list-disc list-inside">

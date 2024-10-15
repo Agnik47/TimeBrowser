@@ -4,9 +4,9 @@ import Nav from './Nav';
 import Button from './Button';
 
 const TimerInput = () => {
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
+  const [hours, setHours] = useState("");
+  const [minutes, setMinutes] = useState("");
+  const [seconds, setSeconds] = useState("");
 
   const totalTime = (hours * 3600 + minutes * 60 + seconds) * 1000; // Convert to milliseconds
 
@@ -21,32 +21,33 @@ const TimerInput = () => {
   const isFullScreen = () => {
     return !!document.fullscreenElement;
   };
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-black to-gray-800 text-white">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-black to-gray-800 text-white p-4">
       <Nav />
 
       <h1 className="text-8xl font-serif mb-6">Set Your Timer</h1>
-      <div className="flex space-x-4 mb-6">
+      <div className="flex flex-col sm:flex-row sm:space-x-4 mb-6 w-full">
         <input
           type="number"
           placeholder="Hour"
           value={hours}
           onChange={(e) => setHours(Number(e.target.value))}
-          className="w-30 p-2 border border-gray-400 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500 bg-gray-700 placeholder-gray-400"
+          className="w-full sm:w-30 p-2 border border-gray-400 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500 bg-gray-700 placeholder-gray-400 mb-2 sm:mb-0"
         />
         <input
           type="number"
           placeholder="Minute"
           value={minutes}
           onChange={(e) => setMinutes(Number(e.target.value))}
-          className="w-30 p-2 border border-gray-400 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500 bg-gray-700 placeholder-gray-400"
+          className="w-full sm:w-30 p-2 border border-gray-400 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500 bg-gray-700 placeholder-gray-400 mb-2 sm:mb-0"
         />
         <input
           type="number"
           placeholder="Second"
           value={seconds}
           onChange={(e) => setSeconds(Number(e.target.value))}
-          className="w-30 p-2 border border-gray-400 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500 bg-gray-700 placeholder-gray-400"
+          className="w-full sm:w-30 p-2 border border-gray-400 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500 bg-gray-700 placeholder-gray-400 mb-2 sm:mb-0"
         />
       </div>
 
