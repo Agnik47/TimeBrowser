@@ -1,21 +1,28 @@
-Timer App ⏱️
-Just a small practice project! 😄 I was feeling bored during my college lunch break, so I whipped this up. Set your timers and track your tasks in style. Quick, fun, and built in just 2 hours! 
+# Timer App ⏱️
 
-🖥️ Features
-Set a Timer: Allows users to set hours, minutes, and seconds for a countdown.
-Real-Time Countdown: Displays the remaining time with smooth transitions and accurate time formatting.
-Pause/Resume: Users can pause and resume the timer at any point.
-Exit Functionality: A simple exit button that takes users back to the homepage.
-Neon-inspired UI: A modern and visually appealing interface powered by Tailwind CSS, with gradient backgrounds and smooth animations.
+**Just a small practice project!** 😄 I was feeling bored during my college lunch break, so I whipped this up. Set your timers and track your tasks in style. Quick, fun, and built in just **2 hours!** 
 
-🚀 Technologies Used
-React: For building the user interface and managing state.
-Tailwind CSS: For styling the app with a responsive and modern design.
-React Router: For navigation between the input and display pages.
-JavaScript: To handle the logic for timer updates and user interactions.
+---
 
-📂 Project Structure
-bash
+## 🖥️ Features
+- **Set a Timer**: Allows users to set hours, minutes, and seconds for a countdown.
+- **Real-Time Countdown**: Displays the remaining time with smooth transitions and accurate time formatting.
+- **Pause/Resume**: Users can pause and resume the timer at any point.
+- **Exit Functionality**: A simple exit button that takes users back to the homepage.
+- **Neon-inspired UI**: A modern and visually appealing interface powered by Tailwind CSS, with gradient backgrounds and smooth animations.
+
+---
+
+## 🚀 Technologies Used
+- **React**: For building the user interface and managing state.
+- **Tailwind CSS**: For styling the app with a responsive and modern design.
+- **React Router**: For navigation between the input and display pages.
+- **JavaScript**: To handle the logic for timer updates and user interactions.
+
+---
+
+## 📂 Project Structure
+```bash
 .
 ├── src
 │   ├── Components
