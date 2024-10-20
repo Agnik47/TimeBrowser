@@ -24,12 +24,12 @@ const TimerInput = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-black to-gray-800 text-white p-4">
-      <Nav />
+      <Nav toggleFullScreen={toggleFullScreen} isFullScreen={isFullScreen()} />
 
       <h1 className="text-8xl font-serif mb-6">Set Your Timer</h1>
       <div className="flex flex-col sm:flex-row sm:space-x-4 mb-6 w-full">
         <input
-          type="number"
+          type="n"
           placeholder="Hour"
           value={hours}
           onChange={(e) => setHours(Number(e.target.value))}
